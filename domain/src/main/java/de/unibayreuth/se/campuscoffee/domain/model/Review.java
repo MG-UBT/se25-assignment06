@@ -1,6 +1,5 @@
 package de.unibayreuth.se.campuscoffee.domain.model;
 
-import jakarta.validation.constraints.NotBlank;
 import lombok.*;
 
 import java.io.Serial;
@@ -22,7 +21,8 @@ public class Review implements Serializable {
 
     private Long id; // id is null when creating a new task
     private LocalDateTime createdAt; // is null when using DTO to create a new POS
-    private Long posId;
+    private final Long posId;
+    private final Long authorId;
     @NonNull
     private final String review;
     private final Boolean approved;
