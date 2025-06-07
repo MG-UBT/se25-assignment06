@@ -26,4 +26,5 @@ public class Review implements Serializable {
     @NonNull
     private final String review;
     private final Boolean approved;
+    private Integer approvalCount;
 }
